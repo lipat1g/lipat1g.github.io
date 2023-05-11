@@ -23,7 +23,8 @@
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
         
     <link rel="stylesheet" href="style.css">
-    <title>Sanity checker</title>
+    <link rel="icon" type="image/jpg" href="img/icon.ico"/>
+    <title>Problém s dungeonem?</title>
   </head>
   <body>
     <header>
@@ -40,6 +41,14 @@
         <select class="selection" id="choice" name="choice">
             <option value="yes">Ano</option>
             <option value="no">Ne</option>
+        </select>
+        <br>
+        <label for="choice">Další problémy?</label>
+        <select class="selection" id="choice2" name="choice2">
+            <option value="1Prob">někdo posral mechaniku</option>
+            <option value="2Prob">nekicknul se spell</option>
+            <option value="3Prob">někdo nedodgenul frontál</option>
+            <option value="4Prob">na hovno pull</option>
         </select>
         <br>
         <input class="buttonSub" type="button" value="Výsledek" onclick="submitForm()">
