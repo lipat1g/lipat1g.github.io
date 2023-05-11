@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sanity checker</title>
+  </head>
+  <body>
+    <header>
+        <h1>Je to v prdeli?</h1>
+        <img class="image" src="img/think.jpg">
+    </header>
+    <div class="main">
+     <div class="formBlock">
+        <form>
+        <label for="number">Zadej číslo klíče: </label>
+        <input class="inputNum" type="number" id="number" name="number">
+        <br>
+        <label for="choice">Zemřel někdo?</label>
+        <select class="selection" id="choice" name="choice">
+            <option value="yes">Ano</option>
+            <option value="no">Ne</option>
+        </select>
+        <br>
+        <input class="buttonSub" type="button" value="Výsledek" onclick="submitForm()">
+        </form>
+
+        <p class="resultText" id="result"></p>
+
+        <script>
+        function submitForm() {
+            const number = document.getElementById("number").value;
+            const choice = document.getElementById("choice").value;
+            const resultPara = document.getElementById("result");
+
+            if (choice === "yes") {
+            resultPara.textContent = `Klid, vždyť je to jenom ${number}`;
+            } else if (choice === "no") {
+            resultPara.textContent = "Všechno v pořádku 🙂";
+            }
+        }
+        </script>           
+     </div>  
+    </div>
+
+  </body>
+</html>
