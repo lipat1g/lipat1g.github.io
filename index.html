@@ -65,11 +65,13 @@
             const resultPara = document.getElementById("result");
 
             if (choice === "yes") {
-            resultPara.textContent = `Klid, vždyť je to jenom ${number}`;
+            resultPara.textContent = `Klid, vždyť je to jenom ${number}. Pošli tomu hráčovi následující zprávu`;
+            const videoContainer = document.createElement("div");
+            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/Vbw9vbZYHq0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+            resultPara.appendChild(videoContainer);
             } else if (choice === "no") {
-            resultPara.textContent = "Všechno v pořádku 🙂";
-            }
-        }
+            resultPara.textContent = "Všechno v pořádku 🙂";}
+            };
         </script>           
      </div>  
     </div>
