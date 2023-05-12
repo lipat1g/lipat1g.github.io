@@ -27,53 +27,83 @@
     <title>Problém s dungeonem?</title>
   </head>
   <body>
+
     <header>
         <h1>Je to v prdeli?</h1>
         <img class="image" src="img/think.jpg">
     </header>
+
     <div class="main">
-     <div class="formBlock">
-        <form>
-        <label for="number">Zadej číslo klíče: </label>
-        <input class="inputNum" type="number" id="number" name="number">
-        <br>
-        <label for="choice">Zemřel někdo?</label>
-        <select class="selection" id="choice" name="choice">
-            <option value="yes">Ano</option>
-            <option value="no">Ne</option>
-        </select>
-        <br>
-        <label for="choice">Další problémy?</label>
-        <select class="selection" id="choice2" name="choice2">
-            <option value="1Prob">někdo posral mechaniku</option>
-            <option value="2Prob">nekicknul se spell</option>
-            <option value="3Prob">někdo nedodgenul frontál</option>
-            <option value="4Prob">na hovno pull</option>
-        </select>
-        <br>
+        <form class="mainForm">
+
+        <div class="input1">
+            <label for="number">Zadej číslo klíče: </label>
+            <input class="inputNum" type="number" id="number" name="number">          
+        </div>
+
+        <div class="input2">
+          <label for="choice">Zemřel někdo?</label>
+          <select class="selection" id="choice" name="choice">
+              <option value="yes">Ano</option>
+              <option value="no">Ne</option>
+          </select>          
+        </div>
+
+        <div class="input3">
+          <label for="choice">Další problémy?</label>
+          <select class="selection" id="choice2" name="choice2">
+              <option value="1Prob">nic</option>
+              <option value="2Prob">nekicknul se spell</option>
+              <option value="3Prob">někdo nedodgenul frontál</option>
+              <option value="4Prob">na hovno pull</option>
+              <option value="5Prob">někdo posral mechaniku</option>
+          </select>
+        </div>
+
+
         <input class="buttonSub" type="button" value="Výsledek" onclick="submitForm()">
         </form>
 
         <p class="resultText" id="result"></p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rV5ynCW-kVw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
         <script>
-        function submitForm() {
-            const number = document.getElementById("number").value;
-            const choice = document.getElementById("choice").value;
-            const resultPara = document.getElementById("result");
+          function submitForm() {
+              const number = document.getElementById("number").value;
+              const choice = document.getElementById("choice").value;
+              const choice2 = document.getElementById("choice2").value;
+              const resultPara = document.getElementById("result");
 
-            if (choice === "yes") {
-            resultPara.textContent = `Klid, vždyť je to jenom ${number}. Pošli tomu hráčovi následující zprávu`;
-            const videoContainer = document.createElement("div");
-            videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/Vbw9vbZYHq0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-            resultPara.appendChild(videoContainer);
-            } else if (choice === "no") {
-            resultPara.textContent = "Všechno v pořádku 🙂";}
+              if (choice === "yes") {
+                  if (choice2 === "1Prob") {
+                      resultPara.textContent = `Klid, vždyť je to jenom ${number}`;
+                  } else if (choice2 === "2Prob") {
+                      resultPara.textContent = `Vzkaž mu následující zprávu: `;
+                      const videoContainer = document.createElement("div");
+                      videoContainer.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/Vbw9vbZYHq0?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+                      resultPara.appendChild(videoContainer);
+                  } else if (choice2 === "3Prob") {
+                      resultPara.textContent = "boomer spoluhráč bohužel";
+                  } else if (choice2 === "4Prob") {
+                      resultPara.textContent = "tank diff unlucky go next run";
+                  } else if (choice2 === "5Prob") {
+                      resultPara.textContent = "tak nemá chodit ten dungeon když ho neví loool wtf";
+                  }
+              } else if (choice === "no") {
+                  if (choice2 === "1Prob") {
+                      resultPara.textContent = "Všechno v pořádku 🙂";
+                  } else if (choice2 === "2Prob") {
+                      resultPara.textContent = "Pokud hráč v dungeonu nekickuje spell: Komunikujte s ním a vysvětlete mu, jaký negativní vliv to má na tým. Využijte funkci kickování spellů, pokud je k dispozici. Pokud hráč stále nekickuje spell, akceptujte situaci a snažte se hrát co nejlépe.";
+                  } else if (choice2 === "3Prob") {
+                      resultPara.textContent = "Pokud se někdo nevyhýbá frontálnímu útoku v hře: Upozorněte hráče na nebezpečí a jak se mu vyhnout. Ukážte hráči, jak se vyhnout útokům, pokud máte zkušenosti. Pokud hráč stále nechápe, připravte se na to, že budete muset útoky přežít.";
+                  } else if (choice2 === "4Prob") {
+                      resultPara.textContent = "Pokud se setkáte s hráčem, který špatně přitahuje nepřátelské mobky, můžete podniknout následující kroky: Upozorněte hráče na to, jak správně přitahovat mobky: Pokuste se hráči vysvětlit, jakým způsobem by měl přitahovat mobky, aby minimalizoval riziko pro tým. Vysvětlete hráči, jaké jsou následky špatného přitahování mobů: Přitahování mobů špatným způsobem může způsobit, že se nepřátelé rozběhnou a zaútočí na celý tým, což může být fatální pro průchod dungeonem. Buďte připraveni na následky: Pokud hráč stále nechápe, jak správně přitahovat mobky, musíte být připraveni na to, že se situace může zhoršit. Ujistěte se, že máte dostatečné množství léků a dalších prostředků, abyste přežili. Je důležité být trpělivý a nekritizovat hráče příliš tvrdě, protože každý se učí a zlepšuje se v průběhu času. Snažte se hráče podpořit a ukázat mu, jak si zlepšit své schopnosti.";
+                  } else if (choice2 === "5Prob") {
+                      resultPara.textContent = "Pokud někdo pokazí mechaniku dungeonu v hře: Upozorněte hráče na chybu. Vysvětlete, jak se správně provádí mechanika. Snažte se najít řešení a být trpělivý s hráčem.";
+                  }
+              }
             };
-        </script>           
-     </div>  
+        </script>          
+
     </div>
 
     <audio controls>

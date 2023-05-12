@@ -1,68 +1,68 @@
 html {
-    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam379.cur), pointer;    
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam379.cur), auto;
 }
 
 body {
-    margin: 0;
-    text-align: center;
     background-image: url(img/orc-horde.gif);
     background-size: cover;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
 }
 
 header {
-    margin-bottom: 10%;
-    margin-top: 1%;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 10px;
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
-    font-family: Comic-Sans;
     display: flex;
     justify-content: center;
     border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: fit-content;
+    border: 5px solid white;
 }
 
 h1 {
-    padding: 20px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 
 .main {
-    margin-left: 25%;
-    margin-right: 25%;
     background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
-    min-height: 10rem;
     font-size: 30px;
     border-radius: 20px;
+    width: fit-content;
+    padding: 10px;
+    border: 5px solid white;
 }
 
-.formBlock {
-    padding: 20px;
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .inputNum {
-    margin: 10px;
-    height: 30px;
     border: 5px solid red;
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto;
 }
 
 .buttonSub {
-    margin: 10px;
-    padding: 10px;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     font-size: 30px;
-    width: 200px;
     background-color: red;
     border-radius: 20px;
     border: 0px;
     color: white;
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto;
 }
 
 .resultText {
-    font-size: 50px;
-    color: red;
+    font-size: 30px;
+    color: green;
     background: white;
+    text-align: center;
 }
 
 .image {
@@ -71,8 +71,8 @@ h1 {
 }
 
 .selection {
-    padding: 10px;
     border: 5px solid red;
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam375.cur), auto;
 }
 
 audio {
