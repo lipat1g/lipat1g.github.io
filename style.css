@@ -1,3 +1,7 @@
+:root {
+    --rainbow-grad-bg: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+}
+
 html {
     cursor: url(https://cur.cursors-4u.net/games/gam-4/gam379.cur), auto;
 }
@@ -14,7 +18,7 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+    background: var(--rainbow-grad-bg);
     display: flex;
     justify-content: center;
     border-radius: 20px;
@@ -29,8 +33,9 @@ h1 {
 }
 
 .main {
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%);
+    background: var(--rainbow-grad-bg);
     font-size: 30px;
+    margin-bottom: 10px;
     border-radius: 20px;
     width: fit-content;
     padding: 10px;
@@ -41,6 +46,26 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.ad {
+    background: var(--rainbow-grad-bg);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px;
+    border: 5px solid white;    
+}
+
+.ad p {
+    background-color: white;
+}
+
+.ad a {
+    color: red;
+    background-color: white;
+    font-size: 50px;
 }
 
 .inputNum {
